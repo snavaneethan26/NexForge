@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Heart, Minus, Plus, ShoppingCart, Star } from 'lucide-react';
 import ProductGallery from '../components/ProductGallery.jsx';
@@ -17,6 +17,8 @@ export default function ProductDetails() {
   const [qty, setQty] = useState(1);
   const { addToCart } = useCart();
   const { isInWishlist, toggleWishlist } = useWishlist();
+
+  useEffect(() => { setQty(1); }, [id]);
 
   const related = useMemo(() => {
     if (!product) return [];

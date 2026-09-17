@@ -72,12 +72,17 @@ export default function Products() {
           {results.length > 0 ? (
             <ProductGrid products={results} />
           ) : (
-            <EmptyState
-              title="No products found"
-              message="Try a different search term or reset the filters."
-              actionLabel="Reset filters"
-              actionTo="/products"
-            />
+            <>
+              <EmptyState
+                title="No products found"
+                message="Try a different search term or reset the filters."
+              />
+              <div style={{ textAlign: 'center', marginTop: 16 }}>
+                <button className="btn btn-primary" onClick={() => { setFilters(DEFAULTS); setParams({}); }}>
+                  Reset filters
+                </button>
+              </div>
+            </>
           )}
         </div>
       </div>

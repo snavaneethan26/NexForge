@@ -48,3 +48,22 @@ Open http://localhost:5173
 npm run build
 npm run preview
 ```
+<<<<<<< HEAD
+=======
+
+## Deploy to Vercel
+
+Option A — dashboard (recommended):
+1. Push this `frontend/` folder to a GitHub repo (it has a `.gitignore` for `node_modules/` and `dist/`).
+2. In Vercel, import the repo and set **Root Directory** to `frontend/` (framework preset: Vite).
+3. Build command: `npm run build`, output directory: `dist`. No environment variables required.
+
+Option B — CLI:
+```bash
+cd frontend
+npx vercel
+```
+
+Client-side routing (`/products/:id`, `/category/*`, `/cart`, …) works on refresh and
+direct links via the SPA fallback in `vercel.json`.
+>>>>>>> ffff5a7 (Update project files)
