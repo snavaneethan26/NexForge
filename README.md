@@ -48,9 +48,3 @@ Open http://localhost:5173
 npm run build
 npm run preview
 ```
-
-## Deploy to Vercel
-
-- Import the `frontend/` directory as the project root (framework preset: Vite).
-- Build command: `npm run build`, output directory: `dist`.
-- No environment variables required.
